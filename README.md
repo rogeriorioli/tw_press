@@ -41,7 +41,7 @@ A modern, minimal WordPress theme built with Tailwind CSS and a complete templat
 
 1. **Download or Clone**
    ```bash
-   git clone https://github.com/yourusername/wp-blank-theme.git
+   git clone https://github.com/rogeriorioli/tw_press
    ```
 
 2. **Install Dependencies**
