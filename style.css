@@ -1,0 +1,71 @@
+/*
+Theme Name: WP Blank Theme
+Theme URI: https://convertes.com.br/tw-press
+Description: A minimal WordPress blank theme with Tailwind CSS integration
+Author: Carlos Rogerio Orioli
+Version: 1.0.0
+Text Domain: wp-blank
+*/
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom theme styles */
+:root {
+  --primary-color: #1f2937;
+  --secondary-color: #6b7280;
+  --accent-color: #3b82f6;
+}
+
+body {
+  @apply font-sans text-gray-900 leading-relaxed;
+}
+
+.container {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* WordPress specific styles */
+.wp-block-image {
+  @apply mb-6;
+}
+
+.wp-block-quote {
+  @apply border-l-4 border-gray-300 pl-4 italic my-6;
+}
+
+.wp-block-separator {
+  @apply my-8 border-gray-300;
+}
+
+/* Skip link for accessibility */
+.screen-reader-text {
+  @apply sr-only;
+}
+
+.screen-reader-text:focus {
+  @apply not-sr-only absolute z-50 bg-white text-black p-2 top-0 left-0;
+}
+
+/* Post navigation */
+.post-navigation {
+  @apply flex justify-between items-center py-8 border-t border-gray-200;
+}
+
+/* Comments */
+.comment-list {
+  @apply list-none p-0;
+}
+
+.comment {
+  @apply mb-6 p-4 bg-gray-50 rounded-lg;
+}
+
+.comment-meta {
+  @apply text-sm text-gray-600 mb-2;
+}
+
+.comment-content {
+  @apply prose prose-sm max-w-none;
+} 

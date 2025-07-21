@@ -1,0 +1,55 @@
+{
+  "name": "wp-blank-theme",
+  "version": "1.0.0",
+  "description": "A minimal WordPress theme with Tailwind CSS integration",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm run watch",
+    "build": "npm run build:css && npm run build:js",
+    "watch": "concurrently \"npm run watch:css\" \"npm run watch:js\"",
+    "build:css": "tailwindcss -i ./src/css/main.css -o ./dist/css/main.css --minify",
+    "watch:css": "tailwindcss -i ./src/css/main.css -o ./dist/css/main.css --watch",
+    "build:js": "webpack --mode=production",
+    "watch:js": "webpack --mode=development --watch",
+    "clean": "rm -rf dist/",
+    "lint:css": "stylelint \"src/css/**/*.css\"",
+    "format": "prettier --write \"src/**/*.{js,css,json}\""
+  },
+  "keywords": [
+    "wordpress",
+    "theme",
+    "tailwindcss",
+    "responsive",
+    "modern"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.10",
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "tailwindcss": "^3.3.0",
+    "webpack": "^5.88.0",
+    "webpack-cli": "^5.1.0",
+    "babel-loader": "^9.1.0",
+    "@babel/core": "^7.22.0",
+    "@babel/preset-env": "^7.22.0",
+    "css-loader": "^6.8.0",
+    "mini-css-extract-plugin": "^2.7.0",
+    "postcss": "^8.4.24",
+    "postcss-loader": "^7.3.0",
+    "autoprefixer": "^10.4.14",
+    "concurrently": "^8.2.0",
+    "stylelint": "^15.10.0",
+    "stylelint-config-standard": "^34.0.0",
+    "prettier": "^3.0.0",
+    "chokidar-cli": "^3.0.0"
+  },
+  "dependencies": {},
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
+} 
